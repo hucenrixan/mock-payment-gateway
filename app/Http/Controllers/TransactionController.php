@@ -44,7 +44,7 @@ class TransactionController extends Controller
         return response()->json([
             'transaction_id' => $transaction->id,
             'status'         => 'pending',
-            'payment_url'    => url('/pay/' . $transaction->id),
+            'payment_url'    => secure_url('/pay/' . $transaction->id),
         ], 201);
     }
 
